@@ -1,31 +1,78 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RunTV</title>
-  <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    h1 {
-      font-size: 3rem;
-      animation: fadeIn 2s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunTV - IPTV Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 960px;
+            background-color: #222;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: #bbb;
+        }
+    </style>
 </head>
 <body>
-  <h1>Benvenuto su RunTV!</h1>
+
+    <div class="container">
+        <h1>Benvenuto su RunTV</h1>
+        <p>Guarda il tuo canale IPTV preferito direttamente nel browser.</p>
+
+        <div class="video-container">
+            <!-- Lettore video per IPTV -->
+            <video controls autoplay>
+                <!-- Sostituisci con il link reale del canale IPTV -->
+                <source src="https://path.to/your/iptv/stream.m3u8" type="application/x-mpegURL">
+                Il tuo browser non supporta il tag video.
+            </video>
+        </div>
+
+        <div class="footer">
+            <p>Powered by RunTV</p>
+        </div>
+    </div>
+
 </body>
 </html>
