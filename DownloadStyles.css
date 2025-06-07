@@ -1,0 +1,146 @@
+/* Stili aggiuntivi per il componente ChannelCard */
+
+.channel-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.download-button-small {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0.25rem;
+}
+
+.download-button-small svg {
+  width: 16px;
+  height: 16px;
+  color: #999;
+}
+
+.download-button-small:hover svg {
+  color: var(--primary-color);
+}
+
+/* Stili per la funzionalità di download */
+.download-progress {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--card-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  z-index: 1000;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.dark-mode .download-progress {
+  background-color: var(--card-dark);
+}
+
+.download-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.download-progress-title {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.download-progress-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.download-progress-close svg {
+  width: 16px;
+  height: 16px;
+}
+
+.download-progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.dark-mode .download-progress-bar-container {
+  background-color: #333;
+}
+
+.download-progress-bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.download-progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.dark-mode .download-progress-info {
+  color: #aaa;
+}
+
+/* Stili per la notifica di download completato */
+.download-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--success-color);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 350px;
+}
+
+.download-notification svg {
+  width: 24px;
+  height: 24px;
+}
+
+.download-notification-content {
+  flex: 1;
+}
+
+.download-notification-title {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.download-notification-message {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.download-notification-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.download-notification-close svg {
+  width: 16px;
+  height: 16px;
+}
